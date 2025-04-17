@@ -5,7 +5,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import org.iot.device.entity.IoTDevice;
-import org.iot.device.entity.ResponseEntity;
+import org.iot.device.dto.ResponseEntity;
 import org.iot.device.repository.IoTDeviceRepository;
 import org.iot.device.service.IoTDeviceRepositoryService;
 import org.iot.device.util.JsonUtil;

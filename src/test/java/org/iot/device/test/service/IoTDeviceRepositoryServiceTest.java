@@ -1,7 +1,7 @@
 package org.iot.device.test.service;
 
 import org.iot.device.entity.IoTDevice;
-import org.iot.device.entity.ResponseEntity;
+import org.iot.device.dto.ResponseEntity;
 import org.iot.device.repository.IoTDeviceRepository;
 import org.iot.device.service.IoTDeviceRepositoryService;
 import org.junit.jupiter.api.Assertions;
@@ -9,10 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.stubbing.Answer;
 
 import java.sql.Timestamp;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

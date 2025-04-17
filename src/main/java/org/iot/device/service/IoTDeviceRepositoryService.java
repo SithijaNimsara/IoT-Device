@@ -1,12 +1,11 @@
 package org.iot.device.service;
 
 import org.iot.device.entity.IoTDevice;
-import org.iot.device.entity.ResponseEntity;
-import org.iot.device.entity.Status;
+import org.iot.device.dto.ResponseEntity;
+import org.iot.device.dto.Status;
 import org.iot.device.repository.IoTDeviceRepository;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 
 public class IoTDeviceRepositoryService {

@@ -1,4 +1,4 @@
-package org.iot.device.entity;
+package org.iot.device.dto;
 
 public class ResponseEntity<T> {
 
