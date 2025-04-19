@@ -76,17 +76,18 @@ public class IoTDeviceRepositoryService {
         }
     }
 
-    public ResponseEntity<IoTDevice> delete(int id) {
-        ResponseEntity<IoTDevice> responseEntity = null;
+    public ResponseEntity<String> delete(int id) {
+        ResponseEntity<String> responseEntity = new ResponseEntity<>();
         try {
             IoTDevice findDevice = ioTDeviceRepository.findById(id);
             if(findDevice == null) {
-                responseEntity.setData(null);
+                responseEntity.setData("IOT Device not found");
                 responseEntity.setStatus(new Status(404, "Data Not Found"));
                 return responseEntity;
             } else {
                 ioTDeviceRepository.deleteById(id);
-                responseEntity.setStatus(new Status(204, "No Content"));
+                responseEntity.setData("Successfully delete the IOT Device");
+                responseEntity.setStatus(new Status(200, "No Content"));
                 return responseEntity;
             }
         } catch (Exception e) {

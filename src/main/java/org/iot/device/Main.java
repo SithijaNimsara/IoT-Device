@@ -67,19 +67,19 @@ public class Main {
                     IoTDevice ioTDevice = JsonUtil.fromJson(exchange.getRequestBody(), IoTDevice.class);
                     ResponseEntity<String> ioTDeviceService = ioTDeviceRepositoryService.save(ioTDevice);
                     code = ioTDeviceService.getStatus().getCode();
-                    response = ioTDeviceService.getData().toString();
+                    response = ioTDeviceService.getData();
                     System.out.println(ioTDeviceService.toString());
                 } else if ("PUT".equals(method)) {
                     int id = Integer.parseInt(path.substring(5));
                     IoTDevice ioTDevice = JsonUtil.fromJson(exchange.getRequestBody(), IoTDevice.class);
                     ResponseEntity<String> ioTDeviceService = ioTDeviceRepositoryService.update(id, ioTDevice);
                     code = ioTDeviceService.getStatus().getCode();
-                    response = ioTDeviceService.getData().toString();
+                    response = ioTDeviceService.getData();
                 } else if ("DELETE".equals(method)) {
                     int id = Integer.parseInt(path.substring(5));
-                    ResponseEntity<IoTDevice> ioTDeviceService = ioTDeviceRepositoryService.delete(id);
+                    ResponseEntity<String> ioTDeviceService = ioTDeviceRepositoryService.delete(id);
                     code = ioTDeviceService.getStatus().getCode();
-                    response = ioTDeviceService.getData().toString();
+                    response = ioTDeviceService.getData();
                 } else {
                     code = 405;
                     response = "Method Not Allowed";
